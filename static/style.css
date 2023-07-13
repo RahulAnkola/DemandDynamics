@@ -4,7 +4,38 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
   
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #de9393;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.7;
+    font-size: 0.7em;
+  }
+  
+
+
   /* Global Styles */
   body {
     font-family: Arial, sans-serif;

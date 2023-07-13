@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enter Sales</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body style="background: url_for('static',filename = 'images/bg.jpg'); opacity: 0.5;">
-    <section id="sales">
+<body>
+    <section id="sales" class="hero">
         <h2>Sales</h2>
         <p>Sales of the day</p>
         <form action="{{url_for('form1')}}" method="post" enctype = "multipart/form-data">
@@ -18,15 +18,25 @@
             <button type="submit">Submit</button>
         </form>
         <br>
-        <h1>OR</h1>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="{{url_for('form2')}}" method="POST" enctype="multipart/form-data">
             <label class="form-label" for="">
-                <h2>Upload .xlsx file</h2>
+                <h2>OR Upload .csv file 
+                    <div class="tooltip">
+                        <span class="fa fa-question-circle"></span>
+                        <span class="tooltiptext">The file should contain 3 columns for date, item number and sales for the day (in this order)</span>    
+                    </div>
+                </h2>
             </label>
-            <input class="form-control" type="file" name="coverImage">
+            <input class="form-control" type="file" name="datafile" id="datafile">
             <button class="btn btn-primary form-control" type='submit'>Submit</button>
         </form>
     </section>
 </body>
 
 </html>
+
+<script>
+    window.onload = function(){
+        document.getElementById('date').valueAsDate = new Date();
+    }; 
+</script>
