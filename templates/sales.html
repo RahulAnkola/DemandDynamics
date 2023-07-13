@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Sales</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    
+</head>
+<body style="background: url_for('static',filename = 'images/bg.jpg'); opacity: 0.5;">
+    <section id="sales">
+        <h2>Sales</h2>
+        <p>Sales of the day</p>
+        <form action="{{url_for('form1')}}" method="post" enctype = "multipart/form-data">
+            <input type="date" id="date" name="date" placeholder="DD-MM-YYYY">
+            <input type="text" id="name" name="itemid" placeholder="Item id">
+            <input type="number" id="quantity" name="quantity" placeholder="Quantity sold">
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+        <h1>OR</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            <label class="form-label" for="">
+                <h2>Upload .xlsx file</h2>
+            </label>
+            <input class="form-control" type="file" name="coverImage">
+            <button class="btn btn-primary form-control" type='submit'>Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>

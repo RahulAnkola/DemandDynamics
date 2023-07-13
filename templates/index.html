@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DemandDynamics - Grocery Inventory Management</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">  
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="./sales.html">Sales</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Welcome to DemandDynamics</h1>
+    <p>Your go-to solution for grocery inventory management.</p>
+   <img height=250px width=250px src="{{url_for('static',filename = 'images/logo.jpg')}}" >
+  
+  <section id="register" class="register">
+    <div class="content">
+      <form>
+        <a href="./sales.html" class="enterSales">Enter Sales</a>
+      </form>
+      <br>
+      <form>
+        <a href="/predict" class="enterSales">Predict Sales</a>
+      </form>
+    </div>
+  </section>
+
+
+  <section id="about">
+    <h2>About DemandDynamics</h2>
+    <p>Revolutionizing Grocery Inventory Management</p>
+    <p>At DemandDynamics, we believe in the power of Deep Learning to transform the way grocery stores manage their inventory. Our innovative project leverages advanced algorithms and historical sales data to accurately predict the demand for stored items. By doing so, we ensure optimal stock levels at all times, reducing waste caused by overstocking and preventing lost sales opportunities due to understocking.</p>
+    <p>With DemandDynamics, grocery retailers can achieve greater efficiency, sustainability, and customer satisfaction. Our cutting-edge technology allows stores to stay one step ahead by anticipating customer demands and adjusting their inventory accordingly. By accurately predicting demand, our solution empowers retailers to minimize costs, improve profitability, and provide a seamless shopping experience for their customers.</p>
+    <p>Join us on this journey to redefine the future of grocery retail. Together, we can build a more efficient, sustainable, and customer-friendly industry that meets the evolving needs of shoppers.</p>
+  </section>
+  
+  
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Get in touch with our team.</p>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button onclick="" type="submit">Submit</button>
+    </form>
+  </section>
+
+
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 DemandDynamics. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
