@@ -6,6 +6,7 @@
   }
 
 
+  
   .tooltip {
     position: relative;
     display: inline-block;
@@ -85,9 +86,9 @@
   }
   .enterSales{
     font-size: 2em;
-    width: 110%;
+    width: 60%;
     background-color: #333;
-    border-radius:4cm;
+    border-radius:2cm;  
     text-decoration: none;
     color: white;
   }

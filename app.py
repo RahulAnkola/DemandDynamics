@@ -3,6 +3,7 @@ import csv
 import os
 import numpy as np
 import pandas as pd
+import generateOutput 
 
 app = Flask(__name__)
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop\\')
@@ -11,6 +12,10 @@ app.config['UPLOAD_FOLDER'] = desktop
 
 @app.route('/')
 def default():
+    return render_template("index.html")
+
+@app.route('/index.html')
+def index():
     return render_template("index.html")
 
 @app.route('/sales.html')
@@ -22,7 +27,7 @@ def predict():
     if not (os.path.exists(f'{desktop}/data.csv')):
         return 'Data file does not exist. Please enter data first'
     else:
-        print()
+        return generateOutput.begin()
         #run model get results
 
 
@@ -49,7 +54,7 @@ def form1():
 
         new_id = last_id + 1
         writer.writerow([new_id, date, 1, item_id, quantity])
-
+    return f"hell ohelof d <br> fajbk <br> dsbain <br> fas"
     return render_template("sales.html")
 
 
