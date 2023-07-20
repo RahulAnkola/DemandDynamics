@@ -54,7 +54,6 @@ def form1():
 
         new_id = last_id + 1
         writer.writerow([new_id, date, 1, item_id, quantity])
-    return f"hell ohelof d <br> fajbk <br> dsbain <br> fas"
     return render_template("sales.html")
 
 
